@@ -9,7 +9,7 @@
 % observed - the actual/expected outputs for inputs
 % T        - number of iterations for training
 
-function [w1,w2,w3,f_val] = jer_Adam_DL_2(w1,w2,w3,input,observed,T,f_val)
+function [w1,w2,w3] = jer_Adam_DL_2(w1,w2,w3,input,observed,T)
 t = 1; %Initial step
 tol = 1e-09; %Tolerance
 init = zeros(T,1);
@@ -121,9 +121,6 @@ end
 end
 %f_val(j:j,1:3)=MSE;
 %epochs=[1:T ]';
-%plot(epochs,f_val,'-x') 
-%xlabel('Epoch');
-%ylabel('Mean Square Error');
 fprintf('The number of iterations is: %d\n',t-1);
 fprintf('The error reached is: %d\n',error);
 end
