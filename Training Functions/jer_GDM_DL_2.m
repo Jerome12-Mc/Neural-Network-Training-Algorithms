@@ -8,7 +8,7 @@ init = zeros(T,1);
 for j = 1:T
 global inputs bias hidden outputs;
 alpha = 0.01; % The Learning rate
-gamma = 0.9;
+gamma = 0.9; %Momentum Hyperparameter
 initial_w1 = zeros(hidden,inputs);
 initial_w2 = zeros(hidden,hidden);
 initial_w3 = zeros(outputs,hidden);
