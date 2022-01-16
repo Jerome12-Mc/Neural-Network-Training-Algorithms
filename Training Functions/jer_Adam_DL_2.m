@@ -17,10 +17,10 @@ init = zeros(T,1);
 for j = 1:T
 global inputs bias hidden outputs;
 alpha = 0.001; % The Learning rate
-beta_1 = 0.9;  % Discount factor
+beta_1 = 0.9;  % Momentum Hyperparameters
 beta_2 = 0.999;
-epsilon = 10e-08;
-% Initial parameters set to 0
+epsilon = 10e-08; %Fuzz factor
+% Initial moving averages parameters set to 0
 initial_mt1 = zeros(hidden,inputs);
 initial_vt1 = zeros(hidden,inputs);
 initial_mt2 = zeros(hidden,hidden);
