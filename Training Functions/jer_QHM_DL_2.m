@@ -16,7 +16,7 @@ init = zeros(T,1);
 for j = 1:T
 global inputs bias hidden outputs;
 alpha = 0.01; % The Learning rate
-beta = 0.9;
+beta = 0.9; %Momentum Hyperparameter
 nu = 0.8; %Discount factor
 % Initial parameters set to 0
 initial_vt1 = zeros(hidden,inputs);
